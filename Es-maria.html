@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Modulo Completo - Esercizio Codegrind</title>
+</head>
+<body>
+
+    <h1>Modulo di Registrazione Completo</h1>
+
+    <form action="/submit-form" method="POST">
+        
+        <fieldset>
+            <legend>Dati Personali</legend>
+            
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required />
+            <br /><br />
+
+            <label for="age">Età:</label>
+            <input type="number" id="age" name="age" min="1" max="120" />
+            <br /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+        </fieldset>
+
+        <fieldset>
+            <legend>Genere</legend>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Maschio</label>
+            <br />
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Femmina</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Località</legend>
+            <label for="country">Paese di residenza:</label>
+            <select id="country" name="country">
+                <option value="italy">Italia</option>
+                <option value="france">Francia</option>
+                <option value="germany">Germania</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>I tuoi Interessi</legend>
+            <input type="checkbox" id="interest1" name="interests" value="sport" />
+            <label for="interest1">Sport</label>
+            <br />
+            <input type="checkbox" id="interest2" name="interests" value="music" />
+            <label for="interest2">Musica</label>
+            <br />
+            <input type="checkbox" id="interest3" name="interests" value="reading" />
+            <label for="interest3">Lettura</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Messaggio</legend>
+            <label for="comment">Commento:</label><br />
+            <textarea id="comment" name="comment" rows="4" cols="30"></textarea>
+        </fieldset>
+
+        <input type="hidden" id="hiddenField" name="hiddenField" value="valorePredefinito" />
+
+        <fieldset>
+            <legend>Conferma</legend>
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">Accetto i termini e le condizioni</label>
+            <br />
+            <input type="checkbox" id="sendCopy" name="sendCopy" />
+            <label for="sendCopy">Invia una copia a me stesso</label>
+            <br /><br />
+            <input type="submit" value="Invia Modulo Completo" />
+        </fieldset>
+    </form>
+</body>
